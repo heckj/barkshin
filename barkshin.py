@@ -12,3 +12,6 @@ def frontpage(searchword=None):
     return render_template('base.html',
                            searchword=searchword,
                            results=results)
+
+if __name__ == '__main__':
+    app.run()

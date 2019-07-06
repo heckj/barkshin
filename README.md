@@ -5,7 +5,9 @@ A little playground app for hosting a site that intentionally returns specific e
 I'm using it to test mocking libraries.
 
 Uses:
+
 * virtualenv
+* Flask
 
 Setup
 -----
@@ -14,10 +16,23 @@ Setup
     source .venv/bin/activate
     pip install -r requirements.txt
 
+Run locally
+-----------
+
+    python barkshin.py
+
 Heroku App
 ----------
 
-App URL http://t5concordance.herokuapp.com/
-Git URL git@heroku.com:t5concordance.git
+setup:
 
-    git push heroku heroku:master
+    heroku create barkshin
+
+    Creating ⬢ barkshin... done
+    https://barkshin.herokuapp.com/ | https://git.heroku.com/barkshin.git
+
+    git push heroku master
+    heroku logs
+    heroku open
+
+[Heroku python docs](https://devcenter.heroku.com/categories/python-support)
