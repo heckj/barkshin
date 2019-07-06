@@ -5,22 +5,13 @@
 <h1>Barking your shins</h1>
 <hr id="stripe">
 
-{% if searchword %}
-<h2>concordance for {{ searchword }}</h2>
-    {% if results %}
-    <p>entries found: {{ results|length }}:</p>
-    <ul>
-    {% for group in results|groupby('page_num') %}
-        <li>Page {{ group.grouper}}<ul>
-        {% for concord_result in group.list %}
-            <li>{{ concord_result.context }}</li>
-        {% endfor %}</ul></li>
-    {% endfor %}
-    </ul>
-    {% else %}
-    <p>no results were found.</p>
-    {% endif %}
-{% endif %}
+<h2>links</h2>
+<ul>
+    <li><a href="/json">/json</a> (JSON sample)</li>
+    <li><a href="/foo">/foo</a> (404)</li>
+    <li><a href="/badRequest">/badRequest</a> (400)</li>
+    <li><a href="/generalError">/generalError</a> (500)</li>
+</ul>
 
 <p class:"about">This is a basic program that simply provides convenient responses to test mocking libraries, API connections, etc.
 The code for this application is available under the Apache license and can be found on github at <a href="https://github.com/heckj/barkshin">heckj/barkshin</a>.
