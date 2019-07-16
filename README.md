@@ -16,6 +16,16 @@ Setup
     source .venv/bin/activate
     pip install -r requirements.txt
 
+Dev/Test Setup
+--------------
+
+    source .venv/bin/activate
+    pip install -r dev-requirements.txt
+
+run tests:
+
+    py.test
+
 Run locally
 -----------
 
@@ -35,4 +45,4 @@ setup:
     heroku logs
     heroku open
 
-[Heroku python docs](https://devcenter.heroku.com/categories/python-support)
+* [Heroku python docs](https://devcenter.heroku.com/categories/python-support)
