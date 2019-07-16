@@ -6,12 +6,12 @@ from werkzeug.security import safe_str_cmp
 
 class User(object):
     def __init__(self, userid, username, password):
-        self.userid = userid
+        self.id = userid # pylint: disable=invalid-name
         self.username = username
         self.password = password
 
     def __str__(self):
-        return "User(id='%s')" % self.userid
+        return "User(id='%s')" % self.id
 
 USERS = [
     User(1, 'user1', 'abcxyz'),
@@ -19,7 +19,7 @@ USERS = [
 ]
 
 USERNAME_TABLE = {u.username: u for u in USERS}
-USERID_TABLE = {u.userid: u for u in USERS}
+USERID_TABLE = {u.id: u for u in USERS}
 
 # endpoint defaults to /auth
 def authenticate(username, password):
